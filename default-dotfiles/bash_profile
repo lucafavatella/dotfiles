@@ -1,7 +1,27 @@
+## Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
+
 export PS1="\$? \w \$ "
-#export PATH=/Users/XXX/homebrew/sbin:/Users/XXX/homebrew/bin:$PATH
-export HOMEBREW_CACHE=~/Library/Caches/Homebrew
+
+export HOMEBREW_CACHE=$HOME/Library/Caches/Homebrew
+
+export ERL_PREFIX=$HOME/prefix/otp
+export ERL_TOP=$HOME/dev/otp
+
+#VAGRANT_PATH=$HOME/.gem/ruby/1.8/bin
+HOMEBREW_PATH=$HOME/homebrew/sbin:$HOME/homebrew/bin
+ERL_PATH=${ERL_PREFIX}/bin ##:${ERL_PREFIX}/lib/erlang/bin
+#ERL_PATH=$ERL_TOP/bin
+export PATH=$ERL_PATH:$HOMEBREW_PATH:$PATH
+
+alias grep='grep --color'
+alias g='git'
+alias em='emacs'
+alias emc='emacsclient'
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
+fi
+
+if [ -f /usr/share/git-core/git-completion.bash ]; then
+    . /usr/share/git-core/git-completion.bash
 fi
