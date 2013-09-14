@@ -1,6 +1,28 @@
 ## Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
 
 [core]
-	editor = emacs
+        editor = emacs
+[pager]
+        status
 [color]
-	ui = true
+        ui = true
+[log]
+        decorate
+[diff]
+        wordRegex = [[:alnum:]]+|[^[:space:]]
+[alias]
+        b = branch -av
+        s = status -uno
+        su = status -u
+        l = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b'
+        lo = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)'
+        ll = "!f() { git l -M --stat $@; }; f"
+        lp = "!f() { git ll -p $@; }; f"
+        g = grep
+        d = diff
+        dc = diff --cached
+        f = fetch
+        co = checkout
+        a = add
+        ci = commit
+        purge = clean -d -x
