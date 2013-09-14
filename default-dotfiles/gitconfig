@@ -1,3 +1,5 @@
+## Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
+
 [core]
 	editor = emacs
 [color]

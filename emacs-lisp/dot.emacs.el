@@ -1,4 +1,4 @@
-;; Copyright 2013 Luca Favatella
+;; Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
 
 ;; haskell-mode
 ;; Ref: https://github.com/haskell/haskell-mode
