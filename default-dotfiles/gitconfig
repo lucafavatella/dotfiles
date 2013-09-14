@@ -1,0 +1,4 @@
+[core]
+	editor = emacs
+[color]
+	ui = true
