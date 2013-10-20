@@ -11,9 +11,11 @@
 [diff]
         wordRegex = [[:alnum:]]+|[^[:space:]]
 [alias]
-        b = branch -av
-        s = status -uno
-        su = status -u
+        b  = branch -av
+        bd = branch -d
+        s   = status -uno
+        su  = status -u
+        sui = status -u --ignored
         l = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b'
         lo = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)'
         ll = "!f() { git l -M --stat $@; }; f"
