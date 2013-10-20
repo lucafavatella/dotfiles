@@ -25,4 +25,5 @@
         co = checkout
         a = add
         ci = commit
+        cp = cherry-pick
         purge = clean -d -x
