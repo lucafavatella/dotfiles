@@ -19,8 +19,8 @@
         ll = "!f() { git l -M --stat $@; }; f"
         lp = "!f() { git ll -p $@; }; f"
         g = grep
-        d = diff
-        dc = diff --cached
+        d  = diff
+        dc = diff --cached -M
         f = fetch
         co = checkout
         a = add
