@@ -1,25 +1,31 @@
 ## Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
 
+[user]
+        name = Luca Favatella
+        email = lucafavatella@users.noreply.github.com
 [core]
         editor = emacs
 [pager]
         status
 [color]
-	ui = true
+        ui = true
 [log]
         decorate
 [diff]
-        wordRegex = [[:alnum:]]+|[^[:space:]]
+        wordRegex = [[:alnum:]_-]+|[^[:space:]]
+[grep]
+        lineNumber
 [alias]
-        b  = branch -av
-        bd = branch -d
         s   = status -uno
         su  = status -u
         sui = status -u --ignored
-        lo = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)'
-        l  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b'
-        ll = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b' -M --stat
-        lp = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b' -M --stat -p
+        b   = branch -v
+        ba  = branch -v -a
+        bd = branch -d
+        lo = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%cr) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
+        l  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
+        ll = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
+        lp = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p
         g = grep
         d  = diff
         dc = diff --cached -M
@@ -27,5 +33,23 @@
         co = checkout
         a = add
         ci = commit
+        wip = commit -a -m wip
+        amend = commit --amend
+        tl = tag -l
+        ta = tag -a
+        rb  = rebase
+        rbi = rebase -i
+        rbc = rebase --continue
+        rbs = rebase --skip
+        rba = rebase --abort
         cp = cherry-pick
+        cpc = cherry-pick --continue
+        cpa = cherry-pick --abort
+        na  = notes --ref=lucafavatella add
+        ne  = notes edit
+        nrm = notes remove
         purge = clean -d -x
+
+[remote "upstream"]
+        fetch = +refs/heads/*:refs/remotes/upstream/*
+        fetch = +refs/pull/*/head:refs/remotes/upstream/pull/*
