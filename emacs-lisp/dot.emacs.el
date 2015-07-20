@@ -25,6 +25,13 @@
 (add-to-list 'load-path "~/.resources/emacs-lisp/flymake-cursor")
 (require 'flymake-cursor)
 
+;; Ref: www.emacswiki.org/emacs/BuildTags
+;(defun create-tags (dir-name)
+;  "Create tags file."
+;  (interactive "Directory: ")
+;  (eshell-command
+;   (format "find %s -type f | etags -" dir-name)))
+
 ;(push "~/prefix/otp/lib/erlang/lib/tools-2.6.11/emacs" load-path)
 ;(require 'erlang-start)
 ;(require 'erlang-flymake)
