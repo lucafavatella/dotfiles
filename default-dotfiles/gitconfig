@@ -1,4 +1,4 @@
-## Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
+## Copyright (C) 2013-2015 Luca Favatella <slackydeb@gmail.com>
 
 [user]
         name = Luca Favatella
@@ -19,15 +19,18 @@
         s   = status -uno
         su  = status -u
         sui = status -u --ignored
-        b   = branch -v
-        ba  = branch -v -a
+        b  = branch --list -v
+        ba = branch --list -v -a
         bd = branch -d
         lo = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%cr) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
         l  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
         ll = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
         lp = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p
+        lw = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w
+        lc = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
         g = grep
         d  = diff
+        dw = diff -w
         dc = diff --cached -M
         f = fetch
         co = checkout
