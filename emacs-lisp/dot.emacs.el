@@ -1,6 +1,8 @@
-;; Copyright (C) 2013 Luca Favatella <slackydeb@gmail.com>
+;; Copyright (C) 2013-2015 Luca Favatella <slackydeb@gmail.com>
 
 (column-number-mode t)
+(menu-bar-mode -1)
+
 (show-paren-mode t)
 (transient-mark-mode t)
 
