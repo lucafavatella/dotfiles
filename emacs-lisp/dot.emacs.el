@@ -20,10 +20,3 @@
 ;(require 'erlang-start)
 ;(require 'erlang-flymake)
 ;(setq-default erlang-indent-level 2)
-
-(require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-;(add-to-list 'package-archives
-;	     '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
