@@ -32,7 +32,15 @@
 ;  (eshell-command
 ;   (format "find %s -type f | etags -" dir-name)))
 
-;(push "~/prefix/otp/lib/erlang/lib/tools-2.6.11/emacs" load-path)
-;(require 'erlang-start)
-;(require 'erlang-flymake)
-;(setq-default erlang-indent-level 2)
+(push "~/dev/kerl/installations/17.3/lib/tools-2.7/emacs" load-path)
+(setq erlang-root-dir "~/dev/kerl/installations/17.3")
+(setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
+(require 'erlang-start)
+(setq-default erlang-indent-level 4)
+
+(require 'erlang-flymake)
+;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
+
+(add-to-list 'load-path "~/dev/distel/elisp")
+(require 'distel)
+(distel-setup)
