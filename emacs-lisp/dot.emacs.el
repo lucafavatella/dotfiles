@@ -10,20 +10,34 @@
 (setq-default tab-width 4)
 (setq-default show-trailing-whitespace t)
 
-;; Ref: http://www.emacswiki.org/emacs/EightyColumnRule#toc5
-;; Ref 2: https://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html
-(require 'whitespace)
-;(setq whitespace-style '(face empty tabs lines-tail trailing))
-(setq whitespace-style '(face lines-tail))
-;(setq whitespace-style '(face trailing tabs spaces lines newline empty))
-(global-whitespace-mode t)
+;; Ref http://www.lunaryorn.com/2015/01/06/my-emacs-configuration-with-use-package.html
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
+(package-initialize)
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+;;
+(require 'use-package)
 
 ;; Refs:
-;; * http://www.emacswiki.org/emacs/FlymakeCursor
-;; * http://www.emacswiki.org/emacs/flymake-cursor.el
-;; * http://www.emacswiki.org/emacs/download/flymake-cursor.el
-(add-to-list 'load-path "~/.resources/emacs-lisp/flymake-cursor")
-(require 'flymake-cursor)
+;; * http://www.emacswiki.org/emacs/EightyColumnRule#toc5
+;; * https://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html
+(use-package
+ whitespace
+ :init (global-whitespace-mode t)
+ :config (setq whitespace-style '(face trailing tabs spaces lines-tail))
+ )
+
+(use-package flymake-cursor :ensure t)
+
+(use-package erlang :ensure t)
+(setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
+(require 'erlang-start)
+(require 'erlang-flymake)
+;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
 
 ;; Ref: www.emacswiki.org/emacs/BuildTags
 ;(defun create-tags (dir-name)
@@ -32,15 +46,6 @@
 ;  (eshell-command
 ;   (format "find %s -type f | etags -" dir-name)))
 
-(push "~/dev/kerl/installations/17.3/lib/tools-2.7/emacs" load-path)
-(setq erlang-root-dir "~/dev/kerl/installations/17.3")
-(setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
-(require 'erlang-start)
-(setq-default erlang-indent-level 4)
-
-(require 'erlang-flymake)
-;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
-
-(add-to-list 'load-path "~/dev/distel/elisp")
-(require 'distel)
-(distel-setup)
+;(add-to-list 'load-path "~/dev/distel/elisp")
+;(require 'distel)
+;(distel-setup)
