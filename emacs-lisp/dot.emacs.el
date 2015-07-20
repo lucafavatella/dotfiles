@@ -9,7 +9,14 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default show-trailing-whitespace t)
-;(require 'whitespace)
+
+;; Ref: http://www.emacswiki.org/emacs/EightyColumnRule#toc5
+;; Ref 2: https://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html
+(require 'whitespace)
+;(setq whitespace-style '(face empty tabs lines-tail trailing))
+(setq whitespace-style '(face lines-tail))
+;(setq whitespace-style '(face trailing tabs spaces lines newline empty))
+(global-whitespace-mode t)
 
 ;; Refs:
 ;; * http://www.emacswiki.org/emacs/FlymakeCursor
