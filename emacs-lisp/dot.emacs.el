@@ -28,7 +28,7 @@
 (use-package
  whitespace
  :init (global-whitespace-mode t)
- :config (setq whitespace-style '(face trailing tabs spaces lines-tail))
+ :config (setq whitespace-style '(face trailing tabs lines-tail))
  )
 
 (use-package flymake-cursor :ensure t)
