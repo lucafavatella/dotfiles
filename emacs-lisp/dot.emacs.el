@@ -10,16 +10,15 @@
 (setq-default tab-width 4)
 (setq-default show-trailing-whitespace t)
 
-;; Ref http://www.lunaryorn.com/2015/01/06/my-emacs-configuration-with-use-package.html
 (require 'package)
-(setq package-enable-at-startup nil)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
+(setq package-enable-at-startup nil)
 (package-initialize)
+;; Bootstrap use-package. Ref: http://www.lunaryorn.com/2015/01/06/my-emacs-configuration-with-use-package.html#automatic-package-installation
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-;;
 (require 'use-package)
 
 ;; Refs:
