@@ -8,7 +8,6 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq-default show-trailing-whitespace t)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -21,14 +20,10 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;; Refs:
-;; * http://www.emacswiki.org/emacs/EightyColumnRule#toc5
-;; * https://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html
-(use-package
- whitespace
- :init (global-whitespace-mode t)
- :config (setq whitespace-style '(face trailing tabs lines-tail))
- )
+(use-package whitespace
+  :init (global-whitespace-mode t)
+  :config (setq whitespace-style '(face trailing tabs lines-tail))
+  )
 
 (use-package flymake-cursor :ensure t)
 
