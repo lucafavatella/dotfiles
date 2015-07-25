@@ -28,6 +28,12 @@
 
 (use-package flymake-cursor)
 
+(use-package zenburn-theme)
+(use-package solarized-theme)
+(load-theme 'zenburn t)
+;(load-theme 'solarized-dark t)
+;(load-theme 'solarized-light t)
+
 (use-package erlang)
 (setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
 (require 'erlang-start)
