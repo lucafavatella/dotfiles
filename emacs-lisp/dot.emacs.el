@@ -19,15 +19,16 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
+(setq use-package-always-ensure t)
 
 (use-package whitespace
   :init (global-whitespace-mode t)
   :config (setq whitespace-style '(face trailing tabs lines-tail))
   )
 
-(use-package flymake-cursor :ensure t)
+(use-package flymake-cursor)
 
-(use-package erlang :ensure t)
+(use-package erlang)
 (setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
 (require 'erlang-start)
 (require 'erlang-flymake)
