@@ -1,7 +1,9 @@
 ;; Copyright (C) 2013-2015 Luca Favatella <slackydeb@gmail.com>
 
-(column-number-mode t)
 (menu-bar-mode -1)
+
+(line-number-mode t)
+(column-number-mode t)
 
 (show-paren-mode t)
 (transient-mark-mode t)
@@ -29,10 +31,7 @@
 (use-package flymake-cursor)
 
 (use-package zenburn-theme)
-(use-package solarized-theme)
 (load-theme 'zenburn t)
-;(load-theme 'solarized-dark t)
-;(load-theme 'solarized-light t)
 
 (use-package erlang)
 (setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
