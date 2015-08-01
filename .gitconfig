@@ -45,9 +45,6 @@
         cp = cherry-pick
         cpc = cherry-pick --continue
         cpa = cherry-pick --abort
-        na  = notes --ref=lucafavatella add
-        ne  = notes edit
-        nrm = notes remove
         purge = clean -d -x
 
 [remote "upstream"]
