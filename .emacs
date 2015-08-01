@@ -33,10 +33,12 @@
 (use-package zenburn-theme)
 (load-theme 'zenburn t)
 
-(use-package erlang)
-(setq exec-path (cons "~/dev/kerl/installations/17.3/bin" exec-path))
-(require 'erlang-start)
-(require 'erlang-flymake)
+(use-package erlang
+  :init (setq exec-path (cons "~/dev/kerl/installations/17.4/bin" exec-path))
+  :config
+  (require 'erlang-start)
+  (require 'erlang-flymake)
+  )
 ;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
 
 ;; Ref: www.emacswiki.org/emacs/BuildTags
