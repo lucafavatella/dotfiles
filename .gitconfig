@@ -55,4 +55,4 @@
         fetch = +refs/pull/*/head:refs/remotes/upstream/pull/*
 
 [include]
-        path = ~/.gitconfig.inc
+        path = ~/.gitconfig_local
