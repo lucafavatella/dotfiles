@@ -38,6 +38,7 @@ if [ is_osx ]; then
     ### Path
     HOMEBREW_PATH=$HOME/homebrew/bin
     export PATH=$HOMEBREW_PATH:$PATH
+    unset HOMEBREW_PATH
 
     ### Prompt
     if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
