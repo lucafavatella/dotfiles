@@ -33,6 +33,8 @@
 (use-package zenburn-theme)
 (load-theme 'zenburn t)
 
+(use-package yaml-mode)
+
 (use-package erlang
   :init (setq exec-path (cons "~/dev/kerl/installations/17.4/bin" exec-path))
   :config
