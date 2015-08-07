@@ -35,6 +35,8 @@
 
 (use-package yaml-mode)
 
+(use-package ggtags)
+
 (use-package erlang
   :init (setq exec-path (cons "~/dev/kerl/installations/17.4/bin" exec-path))
   :config
@@ -42,13 +44,6 @@
   (require 'erlang-flymake)
   )
 ;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
-
-;; Ref: www.emacswiki.org/emacs/BuildTags
-;(defun create-tags (dir-name)
-;  "Create tags file."
-;  (interactive "Directory: ")
-;  (eshell-command
-;   (format "find %s -type f | etags -" dir-name)))
 
 ;(add-to-list 'load-path "~/dev/distel/elisp")
 ;(require 'distel)
