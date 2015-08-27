@@ -35,25 +35,38 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 
 if [ is_osx ]; then
 
+    BREW_PREFIX=$(PATH="~/bin:$PATH" brew --prefix)
+
     ### Path
-    HOMEBREW_PATH=$HOME/homebrew/bin
-    export PATH=$HOMEBREW_PATH:$PATH
-    unset HOMEBREW_PATH
+
+    export PATH="~/bin:${BREW_PREFIX}/bin:$PATH"
 
     ### Prompt
-    if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-        source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
-    fi
 
-    ### Exports
-    export HOMEBREW_CASK_OPTS="--caskroom=~/homebrew-cask"
+    if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-prompt.sh" ]; then
+        source "${BREW_PREFIX}/etc/bash_completion.d/git-prompt.sh"
+    fi
 
     ### Extra
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        source $(brew --prefix)/etc/bash_completion
+
+    if [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
+        source "${BREW_PREFIX}/etc/bash_completion"
     fi
-    if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
-        source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+    if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
+        source "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash"
         complete -o default -o nospace -F _git g ## Ref https://github.com/mathiasbynens/dotfiles/blob/c31450229d943144e6e71a1435a02b94c2916af9/.bash_profile#L35-L38
     fi
+
+    ##
+
+    unset BREW_PREFIX
+
+else
+
+    echo "Untested code path" >&2
+
+    ### Path
+
+    export PATH="~/bin:$PATH"
+
 fi
