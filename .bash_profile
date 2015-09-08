@@ -2,6 +2,12 @@
 
 ### Path
 
+## Ref http://superuser.com/questions/544989/does-tmux-sort-the-path-variable/583502#583502
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
 ### Prompt
 
 export GIT_PS1_SHOWDIRTYSTATE=x
