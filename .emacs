@@ -33,6 +33,8 @@
 (use-package zenburn-theme)
 (load-theme 'zenburn t)
 
+(use-package flycheck-package) ;; For MELPA recipes.
+
 (use-package yaml-mode)
 
 (use-package erlang
