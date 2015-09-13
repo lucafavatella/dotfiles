@@ -21,6 +21,7 @@
   (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure t)
+(setq use-package-verbose t)
 
 (use-package whitespace
   :init (global-whitespace-mode t)
@@ -34,15 +35,12 @@
 
 (use-package yaml-mode)
 
-(use-package ggtags)
-
 (use-package erlang
   :init (setq exec-path (cons "~/dev/kerl/installations/17.4/bin" exec-path))
   :config
-  (require 'erlang-start)
-  (require 'erlang-flymake)
+  ;; (require 'erlang-start) ;; Rely on autoload cookies. Ref https://github.com/erlang/otp/commit/1347e55f96714c4b9bd3eb1d378393c1592ab9ac
+  (require 'erlang-flymake) ;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
   )
-;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
 
 ;(add-to-list 'load-path "~/dev/distel/elisp")
 ;(require 'distel)
