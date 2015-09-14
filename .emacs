@@ -30,8 +30,9 @@
 
 (use-package flymake-cursor)
 
-(use-package zenburn-theme)
-(load-theme 'zenburn t)
+(use-package zenburn-theme
+  :config (load-theme 'zenburn t)
+  )
 
 (use-package flycheck-package) ;; For MELPA recipes.
 
