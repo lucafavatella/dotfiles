@@ -22,6 +22,7 @@ export PS1='$? \w$(__git_ps1 " (%s)") $ '
 alias ll='ls -la'
 alias grep='grep --colour'
 
+alias e='emacs -Q'
 alias em='emacs'
 
 alias g='git'
