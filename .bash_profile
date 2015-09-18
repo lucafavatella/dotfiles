@@ -27,6 +27,7 @@ alias em='emacs'
 
 alias g='git'
 alias gg='git grep'
+alias ggi='git grep -i'
 
 ### Functions
 
