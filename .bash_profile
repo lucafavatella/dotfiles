@@ -43,11 +43,11 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 
 if [ is_osx ]; then
 
-    BREW_PREFIX=$(PATH="~/bin:$PATH" brew --prefix)
+    BREW_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix)
 
     ### Path
 
-    export PATH="~/bin:${BREW_PREFIX}/bin:$PATH"
+    export PATH="${HOME}/bin:${BREW_PREFIX}/bin:$PATH"
 
     ### Prompt
 
@@ -75,6 +75,6 @@ else
 
     ### Path
 
-    export PATH="~/bin:$PATH"
+    export PATH="${HOME}/bin:$PATH"
 
 fi
