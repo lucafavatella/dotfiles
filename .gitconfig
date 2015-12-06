@@ -30,6 +30,7 @@
         dw = diff -w
         dc = diff --cached -M
         f = fetch
+        fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
         co = checkout
         a = add
         ci = commit
@@ -46,10 +47,6 @@
         cpc = cherry-pick --continue
         cpa = cherry-pick --abort
         purge = clean -d -x
-
-[remote "upstream"]
-        fetch = +refs/heads/*:refs/remotes/upstream/*
-        fetch = +refs/pull/*/head:refs/remotes/upstream/pull/*
 
 [include]
         path = ~/.gitconfig_local
