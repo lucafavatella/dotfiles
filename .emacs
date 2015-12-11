@@ -39,7 +39,7 @@
 (use-package yaml-mode)
 
 (use-package erlang
-  :init (setq exec-path (cons "~/dev/kerl/installations/17.4/bin" exec-path))
+  :init (setq exec-path (cons "~/dev/kerl/installations/18.1/bin" exec-path))
   :config
   ;; (require 'erlang-start) ;; Rely on autoload cookies. Ref https://github.com/erlang/otp/commit/1347e55f96714c4b9bd3eb1d378393c1592ab9ac
   (require 'erlang-flymake) ;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
