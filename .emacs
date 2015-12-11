@@ -38,6 +38,8 @@
 
 (use-package yaml-mode)
 
+(use-package ggtags)
+
 (use-package erlang
   :init (setq exec-path (cons "~/dev/kerl/installations/18.1/bin" exec-path))
   :config
