@@ -24,6 +24,7 @@ alias grep='grep --colour'
 
 alias e='emacs -Q'
 alias em='emacs'
+alias emacs-prelude='env HOME=$HOME/.emacs-prelude.d emacs'
 
 alias g='git'
 alias gg='git grep'
