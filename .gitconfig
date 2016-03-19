@@ -19,16 +19,18 @@
         b  = branch --list -v
         ba = branch --list -v -a
         bd = branch -d
-        lo = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%cr) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
-        l  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
-        ll = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
-        lp = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p
-        lw = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w
-        lc = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
+        lo  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%cr) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
+        l   = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
+        ll  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
+        lp  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p
+        lw  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w
+        lwc = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
+        lc  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
         g = grep
-        d  = diff
-        dw = diff -w
-        dc = diff --cached -M
+        d   = diff
+        dw  = diff -w
+        dwc = diff -w --color-words
+        dc  = diff --cached -M
         f = fetch
         fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
         co = checkout
