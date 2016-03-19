@@ -31,12 +31,12 @@
         dw  = diff -w
         dwc = diff -w --color-words
         dc  = diff --cached -M
-        f = fetch
+        f      = fetch
         fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
         co = checkout
         a = add
-        ci = commit
-        wip = commit -a -m wip
+        ci    = commit
+        wip   = commit -a -m wip
         amend = commit --amend
         tl = tag -l
         ta = tag -a
@@ -45,7 +45,7 @@
         rbc = rebase --continue
         rbs = rebase --skip
         rba = rebase --abort
-        cp = cherry-pick
+        cp  = cherry-pick
         cpc = cherry-pick --continue
         cpa = cherry-pick --abort
         purge = clean -d -x
