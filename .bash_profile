@@ -46,7 +46,7 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 if [ is_osx ]; then
 
     BREW_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix)
-    EMACS_DEVEL_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix emacs-keg-only)
+    EMACS_DEVEL_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix emacs)-keg-only
 
     ### Path
 
