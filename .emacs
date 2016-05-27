@@ -38,6 +38,8 @@
 
 (use-package yaml-mode)
 
+;(use-package puml-mode)
+
 (use-package ggtags)
 
 (use-package erlang
