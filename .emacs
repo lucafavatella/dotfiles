@@ -28,6 +28,8 @@
   :config (setq whitespace-style '(face trailing tabs lines-tail))
   )
 
+(use-package multiple-cursors)
+
 (use-package flymake-cursor)
 
 (use-package zenburn-theme
