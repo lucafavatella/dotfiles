@@ -23,6 +23,10 @@
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
 
+(use-package uniquify
+  :config (setq uniquify-buffer-name-style 'forward)
+  )
+
 (use-package whitespace
   :init (global-whitespace-mode t)
   :config (setq whitespace-style '(face trailing tabs lines-tail))
