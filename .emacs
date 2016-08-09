@@ -2,6 +2,11 @@
 
 (menu-bar-mode -1)
 
+(require 'uniquify)
+(setq-default uniquify-buffer-name-style 'forward)
+
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (line-number-mode t)
 (column-number-mode t)
 
@@ -9,9 +14,6 @@
 (transient-mark-mode t)
 
 (setq-default indent-tabs-mode nil)
-
-(require 'uniquify)
-(setq-default uniquify-buffer-name-style 'forward)
 
 (require 'package)
 (add-to-list 'package-archives
