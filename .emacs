@@ -10,6 +10,11 @@
 (line-number-mode t)
 (column-number-mode t)
 
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+
 (show-paren-mode t)
 (transient-mark-mode t)
 
