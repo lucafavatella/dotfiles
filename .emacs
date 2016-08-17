@@ -1,5 +1,7 @@
 ;; Copyright (C) 2013-2015 Luca Favatella <slackydeb@gmail.com>
 
+(setq load-prefer-newer t)
+
 (menu-bar-mode -1)
 
 (require 'uniquify)
