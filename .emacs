@@ -42,8 +42,6 @@
 
 (use-package multiple-cursors)
 
-(use-package flymake-cursor)
-
 (use-package zenburn-theme
   :config (load-theme 'zenburn t)
   )
