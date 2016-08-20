@@ -11,6 +11,7 @@
 
 (line-number-mode t)
 (column-number-mode t)
+(which-function-mode t)
 
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
