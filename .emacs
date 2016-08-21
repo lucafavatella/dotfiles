@@ -36,6 +36,8 @@
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
 
+(use-package epl)
+
 (use-package whitespace
   :init (global-whitespace-mode t)
   :config (setq whitespace-style '(face trailing tabs lines-tail))
