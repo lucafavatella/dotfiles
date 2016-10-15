@@ -24,8 +24,8 @@ alias grep='grep --colour'
 
 alias e='emacs -nw -Q'
 alias em='emacs -nw'
-alias emacs-prelude='env HOME=$HOME/.emacs-prelude.d emacs-24.5 -nw'
-alias emacs-edts='env HOME=$HOME/.emacs-edts.d emacs-24.5 -nw'
+alias emacs-prelude='env HOME=$HOME/.emacs-prelude.d emacs -nw'
+alias emacs-edts='env HOME=$HOME/.emacs-edts.d emacs -nw'
 
 alias g='git'
 alias gg='git grep'
@@ -46,11 +46,10 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 if [ is_osx ]; then
 
     BREW_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix)
-    EMACS_DEVEL_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix emacs)-keg-only
 
     ### Path
 
-    export PATH="${HOME}/bin:${EMACS_DEVEL_PREFIX}/bin:${BREW_PREFIX}/bin:$PATH"
+    export PATH="${HOME}/bin:${BREW_PREFIX}/bin:$PATH"
 
     ### Prompt
 
