@@ -49,6 +49,9 @@
   :config (load-theme 'zenburn t)
   )
 
+(use-package editorconfig
+  :config (editorconfig-mode 1))
+
 ;; (use-package flycheck-package) ;; For MELPA recipes.
 
 (use-package yaml-mode)
