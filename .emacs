@@ -49,6 +49,9 @@
   :config (load-theme 'zenburn t)
   )
 
+(use-package editorconfig
+  :config (editorconfig-mode 1))
+
 ;; (use-package flycheck-package) ;; For MELPA recipes.
 
 (use-package yaml-mode)
@@ -64,6 +67,9 @@
   :config
   ;; (require 'erlang-start) ;; Rely on autoload cookies. Ref https://github.com/erlang/otp/commit/1347e55f96714c4b9bd3eb1d378393c1592ab9ac
   (require 'erlang-flymake) ;; Ref for include files in erlang-flymake: https://github.com/legoscia/dotemacs/blob/master/dotemacs.org#try-harder-to-find-include-files-in-flymake
+  (setq help-at-pt-display-when-idle t)
+  (setq help-at-pt-timer-delay 0.1)
+  (help-at-pt-set-timer)
   )
 
 ;(add-to-list 'load-path "~/dev/distel/elisp")
