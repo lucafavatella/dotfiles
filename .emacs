@@ -53,6 +53,7 @@
   :config
   (setq org-catch-invisible-edits 'show-and-error)
   (setq org-todo-keywords '((sequence "TODO" "WIP" "BLOCKED" "|" "DONE" "CANCELED"))) ;; Ref http://orgmode.org/guide/Multi_002dstate-workflows.html#Multi_002dstate-workflows
+  (setq org-log-done 'time)
   )
 
 (use-package editorconfig
