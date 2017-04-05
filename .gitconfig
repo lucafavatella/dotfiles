@@ -12,6 +12,8 @@
         wordRegex = [[:alnum:]_-]+|[^[:space:]]
 [grep]
         lineNumber
+[commit]
+        cleanup = scissors
 [alias]
         s   = status -uno
         su  = status -u
