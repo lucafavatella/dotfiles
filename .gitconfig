@@ -1,4 +1,4 @@
-## Copyright (C) 2013-2015 Luca Favatella <slackydeb@gmail.com>
+## Copyright (C) 2013-2017 Luca Favatella <slackydeb@gmail.com>
 
 [core]
         editor = emacs -nw -Q --eval '(column-number-mode t)'
@@ -41,8 +41,10 @@
         ci    = commit
         wip   = commit -a -m wip
         amend = commit --amend
-        tl = tag -l
-        ta = tag -a
+        tl  = tag -l
+        tlr = ls-remote --tags
+        t   = tag ## [Lightweight tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_lightweight_tags)
+        ta  = tag -a ## [Annotated tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags)
         rb  = rebase
         rbi = rebase -i
         rbc = rebase --continue
