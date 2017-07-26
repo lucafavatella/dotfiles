@@ -20,7 +20,8 @@
         sui = status -u --ignored
         b  = branch --list -v
         ba = branch --list -v -a
-        bd = branch -d
+        tl  = tag -l
+        tlr = ls-remote --tags
         lo  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%cr) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
         l   = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
         ll  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
@@ -36,15 +37,15 @@
         dc  = diff --cached -M
         f      = fetch
         fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
+        bd = branch -d
+        td = tag -d
+        t  = tag ## [Lightweight tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_lightweight_tags)
+        ta = tag -a ## [Annotated tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags)
         co = checkout
         a = add
         ci    = commit
         wip   = commit -a -m wip
         amend = commit --amend
-        tl  = tag -l
-        tlr = ls-remote --tags
-        t   = tag ## [Lightweight tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_lightweight_tags)
-        ta  = tag -a ## [Annotated tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags)
         rb  = rebase
         rbi = rebase -i
         rbc = rebase --continue
