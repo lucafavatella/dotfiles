@@ -19,6 +19,12 @@ export PS1='$? \w$(__git_ps1 " (%s)") $ '
 
 ### Aliases
 
+alias date_l_ymd='date "+%Y%m%d"'
+alias date_u_ymd='date -u "+%Y%m%d"'
+alias date_l_ymdhm='date "+%Y%m%d%H%M"'
+alias date_u_ymdhm='date -u "+%Y%m%d%H%M"'
+alias date_l_ymdhms='date "+%Y%m%d%H%M%S"'
+alias date_u_ymdhms='date -u "+%Y%m%d%H%M%S"'
 alias ll='ls -la'
 alias grep='grep --colour'
 
