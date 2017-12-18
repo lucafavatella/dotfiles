@@ -9,6 +9,7 @@
 [log]
         decorate
 [diff]
+        ## TODO Consider [not splitting multi-byte UTF-8 characters](https://github.com/git/git/blob/v2.15.1/userdiff.c#L12).
         wordRegex = [[:alnum:]_-]+|[^[:space:]]
 [grep]
         lineNumber
