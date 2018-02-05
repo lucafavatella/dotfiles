@@ -51,11 +51,12 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 
 if [ is_osx ]; then
 
+    BREW_CASK_APPDIR="${HOME}/Applications"
     BREW_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix)
 
     ### Path
 
-    export PATH="${HOME}/bin:${BREW_PREFIX}/bin:$PATH"
+    export PATH="${HOME}/bin:${BREW_PREFIX}/bin:${BREW_CASK_APPDIR}/Docker.app/Contents/Resources/bin:$PATH"
 
     ### Prompt
 
