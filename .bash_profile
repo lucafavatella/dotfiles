@@ -77,7 +77,6 @@ if [ is_osx ]; then
     ##
 
     unset BREW_PREFIX
-    unset EMACS_DEVEL_PREFIX
 
 else
 
