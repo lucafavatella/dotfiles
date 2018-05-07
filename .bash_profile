@@ -1,5 +1,3 @@
-## Copyright (C) 2013, 2015, 2016, 2017, 2018 Luca Favatella <slackydeb@gmail.com>
-
 ### Path
 
 ## Ref http://superuser.com/questions/544989/does-tmux-sort-the-path-variable/583502#583502

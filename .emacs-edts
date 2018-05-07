@@ -1,5 +1,3 @@
-;; Copyright (C) 2016 Luca Favatella <slackydeb@gmail.com>
-
 (load-file (concat "/Users/" (user-login-name) "/.emacs"))
 
 ;; Ref https://github.com/tjarvstrand/edts/tree/70dfcfd8cc448c854fb67d65e005ba00e77384c5#first-of-all-ensure-your-environment-is-setup-correctly
