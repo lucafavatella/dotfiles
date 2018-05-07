@@ -1,4 +1,4 @@
-## Copyright (C) 2013-2017 Luca Favatella <slackydeb@gmail.com>
+## Copyright (C) 2013, 2015, 2016, 2017 Luca Favatella <slackydeb@gmail.com>
 
 [core]
         editor = emacs -nw -Q --eval '(column-number-mode t)'
