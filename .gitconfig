@@ -25,15 +25,15 @@
         l   = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
         ll  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
         llf = log --graph --pretty=fuller -M --find-copies-harder --stat
-        lp  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p
-        lw  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w
+        lp  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p --color-moved
+        lw  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-moved
         lwc = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
         lc  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
         g = grep
-        d   = diff
-        dw  = diff -w
+        d   = diff --color-moved
+        dw  = diff -w --color-moved
         dwc = diff -w --color-words
-        dc  = diff --cached -M
+        dc  = diff --cached -M --color-moved
         f      = fetch
         fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
         bd = branch -d
