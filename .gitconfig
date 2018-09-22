@@ -21,14 +21,14 @@
         ba = branch --list -v -a
         tl  = tag -l
         tlr = ls-remote --tags
-        lo  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%cr) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
-        l   = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N'
-        ll  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
+        lo  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(dim)(%ci) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
+        l   = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N'
+        ll  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
         llf = log --graph --pretty=fuller -M --find-copies-harder --stat
-        lp  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p --color-moved
-        lw  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-moved
-        lwc = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
-        lc  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%cr) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
+        lp  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p --color-moved
+        lw  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-moved
+        lwc = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
+        lc  = log --graph --pretty='%C(yellow)%h%C(reset) -%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
         g = grep
         d   = diff --color-moved
         dw  = diff -w --color-moved
