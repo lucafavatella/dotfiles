@@ -23,8 +23,8 @@
         tlr = ls-remote --tags
         lo  = log --graph --pretty='%C(yellow)%h%C(reset)%C(green)%d%C(reset) %C(dim)(%ci) %C(bold)%s%C(reset) %C(dim)<%an>%C(reset)'
         l   = log --graph --pretty='%C(yellow)%h%C(reset)%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N'
-        ll  = log --graph --pretty='%C(yellow)%h%C(reset)%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
-        llf = log --graph --pretty=fuller -M --find-copies-harder --stat
+        ll  = log --graph --pretty='%C(yellow)%h (%t)%C(reset)%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat
+        lf  = log --graph --pretty=fuller -M --find-copies-harder --stat
         lp  = log --graph --pretty='%C(yellow)%h%C(reset)%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p --color-moved
         lw  = log --graph --pretty='%C(yellow)%h%C(reset)%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-moved
         lwc = log --graph --pretty='%C(yellow)%h%C(reset)%C(green)%d%C(reset) %C(bold)%s%C(reset) %C(dim)(%ci) %C(dim)<%an>%C(reset)%+b%+N' -M --find-copies-harder --stat -p -w --color-words
