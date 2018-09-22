@@ -29,10 +29,10 @@
         lw = log --graph --date='iso'          --pretty='format:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b%+N' -M --find-copies-harder --stat -p -w --color-moved
         lc = log --graph --date='iso'          --pretty='format:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b%+N' -M --find-copies-harder --stat -p -w --color-words
         g = grep
-        d   = diff --color-moved
-        dw  = diff -w --color-moved
-        dwc = diff -w --color-words
-        dc  = diff --cached -M --color-moved
+        ## Pass `--cached` to any of the following `d*` aliases for staged/cached changes.
+        d  = diff -M --find-copies-harder    --color-moved
+        dw = diff -M --find-copies-harder -w --color-moved
+        dc = diff -M --find-copies-harder -w --color-words
         f      = fetch
         fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
         bd = branch -d
