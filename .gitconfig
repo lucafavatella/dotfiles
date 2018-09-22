@@ -21,7 +21,7 @@
         ba = branch --list -v -a
         tl  = tag -l
         tlr = ls-remote --tags
-        lo  = log --graph --pretty='%C(yellow)%h%Creset%C(auto)%d%Creset %C(dim)(%ci) %C(bold)%s%Creset %C(dim)<%an>%Creset'
+        lo  = log --graph --date='format:%Y-%m' --pretty='%C(yellow)%>|(11)%h%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset%C(dim) %cd%Creset'
         l   = log --graph --pretty='%C(yellow)%h%Creset%C(auto)%d%Creset %C(bold)%s%Creset %C(dim)(%ci) %C(dim)<%an>%Creset%+b%+N'
         ll  = log --graph --pretty='%C(yellow)%h (%t)%Creset%C(auto)%d%Creset %C(bold)%s%Creset %C(dim)(%ci) %C(dim)<%an>%Creset%+b%+N' -M --find-copies-harder --stat
         lf  = log --graph --pretty=fuller -M --find-copies-harder --stat
