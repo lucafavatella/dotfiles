@@ -1,6 +1,6 @@
 (setq load-prefer-newer t)
 
-(menu-bar-mode -1)
+(menu-bar-mode t)
 
 (require 'uniquify)
 (setq-default uniquify-buffer-name-style 'forward)
