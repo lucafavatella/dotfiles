@@ -28,7 +28,7 @@ alias grep='grep --colour'
 
 alias e='emacs -nw -Q'
 alias em='emacs -nw'
-alias emacs-prelude='env HOME=$HOME/.emacs-prelude.d emacs -nw'
+alias emacs-prelude='emacs-prelude -nw'
 alias emacs-edts='env HOME=$HOME/.emacs-edts.d emacs -nw'
 
 alias g='git'
