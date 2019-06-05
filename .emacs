@@ -63,8 +63,6 @@
 
 ;(use-package puml-mode)
 
-(use-package ggtags)
-
 (use-package erlang
   :init
   (setq exec-path (cons (car (file-expand-wildcards "~/dev/kerl/installations/OTP-19.*/bin")) exec-path))
