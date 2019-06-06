@@ -61,7 +61,7 @@
 
 (use-package yaml-mode)
 
-;(use-package puml-mode)
+;(use-package plantuml-mode)
 
 (use-package erlang
   :init
