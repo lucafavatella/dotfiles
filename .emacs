@@ -63,7 +63,10 @@
 
 ;(use-package plantuml-mode)
 
-(use-package dumb-jump)
+(use-package dumb-jump
+  :bind (("M-g j" . dumb-jump-go)
+         ;; No need to bind `dumb-jump-back` - just use `M-,` i.e. `xref-pop-marker-stack`.
+         ))
 
 (use-package erlang
   :init
