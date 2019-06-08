@@ -22,8 +22,15 @@
 (setq-default indent-tabs-mode nil)
 
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")
+                                        ;("melpa" . "https://melpa.org/packages/")
+        )
+      package-archive-priorities
+      '(("gnu" . 2)
+        ("melpa-stable" . 1)
+        ("melpa" . 0)))
 (setq package-enable-at-startup nil)
 (package-initialize)
 ;; Bootstrap use-package. Ref: http://www.lunaryorn.com/2015/01/06/my-emacs-configuration-with-use-package.html#automatic-package-installation
