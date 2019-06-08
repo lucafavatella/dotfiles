@@ -43,7 +43,13 @@
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
 
-(use-package epl)
+(use-package epl
+  :config (defun my-upgrade ()
+            "Refresh archives and upgrade packages.
+No error is signaled on failed refresh."
+            (interactive)
+            (epl-refresh)
+            (epl-upgrade)))
 
 (use-package whitespace
   :init (global-whitespace-mode t)
