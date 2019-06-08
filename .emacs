@@ -73,7 +73,7 @@ No error is signaled on failed refresh."
 
 (use-package yaml-mode)
 
-;(use-package plantuml-mode)
+(use-package plantuml-mode)
 
 (use-package dumb-jump
   :bind (("M-g j" . dumb-jump-go)
