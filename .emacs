@@ -71,8 +71,6 @@ No error is signaled on failed refresh."
 (use-package editorconfig
   :config (editorconfig-mode 1))
 
-;; (use-package flycheck-package) ;; For MELPA recipes.
-
 (use-package yaml-mode)
 
 ;(use-package plantuml-mode)
