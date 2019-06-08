@@ -33,7 +33,7 @@
         ("melpa" . 0)))
 (setq package-enable-at-startup nil)
 (package-initialize)
-;; Bootstrap use-package. Ref: http://www.lunaryorn.com/2015/01/06/my-emacs-configuration-with-use-package.html#automatic-package-installation
+;; Bootstrap use-package. Ref: https://web.archive.org/web/20161116064333/https://www.lunaryorn.com/posts/my-emacs-configuration-with-use-package.html#section-automatic-package-installation
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
