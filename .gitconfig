@@ -46,6 +46,8 @@
         amend = commit --amend
         rb  = rebase
         rbi = rebase -i
+        rbi2 = rebase -i HEAD~2
+        rbi3 = rebase -i HEAD~3
         rbc = rebase --continue
         rbs = rebase --skip
         rba = rebase --abort
