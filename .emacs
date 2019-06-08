@@ -37,7 +37,10 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(require 'use-package)
+(eval-when-compile
+  (require 'use-package))
+(require 'bind-key) ;; For any `use-package` `:bind` variant.
+(require 'use-package-ensure) ;; For `use-package-always-ensure`.
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
 
