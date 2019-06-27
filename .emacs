@@ -82,7 +82,6 @@ No error is signaled on failed refresh."
 
 (use-package erlang
   :init
-  (setq exec-path (cons (car (file-expand-wildcards "~/dev/kerl/installations/OTP-19.*/bin")) exec-path))
   (add-to-list 'auto-mode-alist '("/\\(?:sys\\|rebar\\)\\.config\\(?:\\..*\\)?\\'" . erlang-mode)) ;; Ref https://github.com/legoscia/dotemacs/blob/55595dc38802fe362aa4c188318519ce44e975a1/dotemacs.org#sysconfig-and-rebarconfig-are-erlang
   :config
   ;; (require 'erlang-start) ;; Rely on autoload cookies. Ref https://github.com/erlang/otp/commit/1347e55f96714c4b9bd3eb1d378393c1592ab9ac
