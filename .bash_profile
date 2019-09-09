@@ -54,7 +54,7 @@ if [ is_osx ]; then
 
     ### Path
 
-    export PATH="${HOME}/bin:${BREW_PREFIX:?}/bin:${BREW_CASK_APPDIR}/Docker.app/Contents/Resources/bin:$PATH"
+    export PATH="${HOME}/bin:${BREW_PREFIX:?}/opt/python/libexec/bin:${BREW_PREFIX:?}/bin:${BREW_CASK_APPDIR}/Docker.app/Contents/Resources/bin:$PATH"
 
     ### Prompt
 
