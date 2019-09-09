@@ -50,25 +50,25 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 if [ is_osx ]; then
 
     BREW_CASK_APPDIR="${HOME}/Applications"
-    BREW_PREFIX=$(PATH="${HOME}/bin:$PATH" brew --prefix)
+    BREW_PREFIX=$("${HOME}"/bin/brew --prefix)
 
     ### Path
 
-    export PATH="${HOME}/bin:${BREW_PREFIX}/bin:${BREW_CASK_APPDIR}/Docker.app/Contents/Resources/bin:$PATH"
+    export PATH="${HOME}/bin:${BREW_PREFIX:?}/bin:${BREW_CASK_APPDIR}/Docker.app/Contents/Resources/bin:$PATH"
 
     ### Prompt
 
-    if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-prompt.sh" ]; then
-        source "${BREW_PREFIX}/etc/bash_completion.d/git-prompt.sh"
+    if [ -f "${BREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh" ]; then
+        source "${BREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh"
     fi
 
     ### Extra
 
-    if [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
-        source "${BREW_PREFIX}/etc/bash_completion"
+    if [ -f "${BREW_PREFIX:?}/etc/bash_completion" ]; then
+        source "${BREW_PREFIX:?}/etc/bash_completion"
     fi
-    if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
-        source "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash"
+    if [ -f "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash" ]; then
+        source "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"
         complete -o default -o nospace -F _git g ## Ref https://github.com/mathiasbynens/dotfiles/blob/c31450229d943144e6e71a1435a02b94c2916af9/.bash_profile#L35-L38
     fi
 
