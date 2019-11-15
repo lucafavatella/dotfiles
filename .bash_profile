@@ -39,7 +39,7 @@ alias ggi='git grep -i'
 
 ### Extra
 
-[ -f .bash_extra ] && source .bash_extra ## Ref https://github.com/mathiasbynens/dotfiles/blob/c31450229d943144e6e71a1435a02b94c2916af9/.bash_profile#L8
+[ -f "${HOME}"/.bash_extra ] && source "${HOME}"/.bash_extra ## Ref https://github.com/mathiasbynens/dotfiles/blob/c31450229d943144e6e71a1435a02b94c2916af9/.bash_profile#L8
 
 ### OS-specific bits
 
