@@ -24,13 +24,13 @@
         ba = branch --list -v -a
         tl  = tag -l
         tlr = ls-remote --tags
-        lo = log --graph --date='format:%Y-%m' --pretty='tformat:%C(yellow)%>|(11)%h%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset'
-        l  = log --graph --date='short'        --pretty='tformat:%C(yellow)%>|(11)%h%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b'
-        ll = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat
+        lo = log --graph --date='format:%Y-%m' --pretty='tformat:%C(yellow)%>|(11)%h%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%ad%Creset'
+        l  = log --graph --date='short'        --pretty='tformat:%C(yellow)%>|(11)%h%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%ad%Creset %C(dim)<%an>%Creset%+b'
+        ll = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%ad%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat
         lf = log --graph                       --pretty=fuller                                                                                                                        -M --find-copies-harder --stat
-        lp = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat -p    --color-moved --no-textconv
-        lw = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat -p -w --color-moved --no-textconv
-        lc = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%cd%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat -p -w --color-words --no-textconv
+        lp = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%ad%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat -p    --color-moved --no-textconv
+        lw = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%ad%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat -p -w --color-moved --no-textconv
+        lc = log --graph --date='iso'          --pretty='tformat:%C(yellow)%>|(11)%h (%t)%Creset %C(bold)%s%Creset%C(auto)%>>|(72)%d%Creset %C(dim)%ad%Creset %C(dim)<%an>%Creset%+b' -M --find-copies-harder --stat -p -w --color-words --no-textconv
         g = grep
         ## Pass `--cached` to any of the following `d*` aliases for staged/cached changes.
         d  = diff -M --find-copies-harder    --color-moved --no-textconv
