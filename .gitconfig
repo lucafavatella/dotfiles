@@ -12,6 +12,12 @@
 [diff "textract"]
         ## In `.gitattributes` of repo, add e.g. `*.pdf   diff=textract`.
         textconv = textract
+[diff "tshark"]
+        ## In `.gitattributes` of repo, add e.g. `*.pcapng   diff=tshark`.
+        textconv = tshark -r
+[diff "tsharkv"]
+        ## In `.gitattributes` of repo, add e.g. `*.pcapng   diff=tsharkv`.
+        textconv = tshark -VP -r
 [grep]
         lineNumber
 [commit]
