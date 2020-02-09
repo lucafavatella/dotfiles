@@ -37,9 +37,9 @@ alias ggi='git grep -i'
 
 ### Functions
 
-### Extra
+### Extra (pre)
 
-[ -f "${HOME}"/.bash_extra ] && source "${HOME}"/.bash_extra ## Ref https://github.com/mathiasbynens/dotfiles/blob/c31450229d943144e6e71a1435a02b94c2916af9/.bash_profile#L8
+test -f "${HOME}"/.bash_extra_pre && source "${HOME}"/.bash_extra_pre
 
 ### OS-specific bits
 
@@ -85,3 +85,7 @@ else
     export PATH="${HOME}/bin:$PATH"
 
 fi
+
+### Extra (post)
+
+test -f "${HOME}"/.bash_extra_post && source "${HOME}"/.bash_extra_post
