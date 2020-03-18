@@ -73,7 +73,10 @@ No error is signaled on failed refresh."
 
 (use-package yaml-mode)
 
-(use-package plantuml-mode)
+(use-package plantuml-mode
+  :init
+  (add-to-list 'auto-mode-alist '("\\.plantuml\\'". plantuml-mode)) ;; Ref https://github.com/skuro/plantuml-mode/blob/ea45a13707abd2a70df183f1aec6447197fc9ccc/README.md#enable-the-major-mode
+  )
 
 (use-package dumb-jump
   :bind (("M-g j" . dumb-jump-go)
