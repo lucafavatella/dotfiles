@@ -76,6 +76,8 @@ No error is signaled on failed refresh."
 (use-package plantuml-mode
   :init
   (add-to-list 'auto-mode-alist '("\\.plantuml\\'". plantuml-mode)) ;; Ref https://github.com/skuro/plantuml-mode/blob/ea45a13707abd2a70df183f1aec6447197fc9ccc/README.md#enable-the-major-mode
+  :config
+  (setq plantuml-default-exec-mode 'executable) ;; Ref https://github.com/skuro/plantuml-mode/blob/ea45a13707abd2a70df183f1aec6447197fc9ccc/README.md#execution-modes and https://github.com/skuro/plantuml-mode/blob/ea45a13707abd2a70df183f1aec6447197fc9ccc/README.md#quick-guide
   )
 
 (use-package dumb-jump
