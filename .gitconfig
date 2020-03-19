@@ -43,7 +43,8 @@
         dw = diff -M --find-copies-harder -w --color-moved --no-textconv
         dc = diff -M --find-copies-harder -w --color-words --no-textconv
         f      = fetch
-        fghprs = "!f() { git fetch \"${1:-upstream}\" +refs/pull/*/head:refs/remotes/\"${1:-upstream}\"/pull/*; }; f"
+        fghpr = "!f() { git fetch \"${2:-origin}\" +refs/pull/${1:?}/head:refs/remotes/\"${2:-origin}\"/pull/${1:?}; }; f"
+        fghprs = "!f() { git fetch \"${1:-origin}\" +refs/pull/*/head:refs/remotes/\"${1:-origin}\"/pull/*; }; f"
         bd = branch -d
         td = tag -d
         t  = tag ## [Lightweight tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_lightweight_tags)
