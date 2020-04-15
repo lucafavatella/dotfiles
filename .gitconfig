@@ -18,6 +18,9 @@
 [diff "tsharkv"]
         ## In `.gitattributes` of repo, add e.g. `*.pcapng   diff=tsharkv`.
         textconv = tshark -VP -r
+[diff "pem"]
+        ## In `.gitattributes` of repo, add e.g. `*.pem  diff=pem`.
+        textconv = openssl asn1parse -i -in
 [grep]
         lineNumber
 [commit]
