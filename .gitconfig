@@ -1,3 +1,5 @@
+[transfer]
+        fsckobjects = true
 [core]
         editor = emacs -nw -Q --eval '(column-number-mode t)'
 [pager]
