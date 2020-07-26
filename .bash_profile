@@ -26,7 +26,7 @@ alias date_u_ymdhms='date -u "+%Y%m%d%H%M%S"'
 alias ll='ls -la'
 alias grep='grep --colour'
 
-alias e='emacs -nw -Q'
+alias e='emacs -nw -Q --eval '"'"'(setq-default make-backup-files nil)'"'"
 alias em='emacs -nw'
 alias emacs-prelude='emacs-prelude -nw'
 alias emacs-edts='env HOME=$HOME/.emacs-edts.d emacs -nw'
