@@ -1,8 +1,4 @@
 (load-file (concat "/Users/" (user-login-name) "/.emacs"))
 
 ;; Ref https://github.com/tjarvstrand/edts/tree/70dfcfd8cc448c854fb67d65e005ba00e77384c5#make-sure-edts-gets-loaded-in-your-emacs
-(use-package edts
-  :init
-  (defun my-edts-after-init-hook () (require 'edts-start))
-  (add-hook 'after-init-hook 'my-edts-after-init-hook)
-  )
+(use-package edts)
