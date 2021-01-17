@@ -37,7 +37,9 @@ alias gg='git grep'
 
 ### Extra (pre)
 
-test -f "${HOME}"/.bash_extra_pre && source "${HOME}"/.bash_extra_pre
+if test -f "${HOME}"/.bash_extra_pre
+    source "${HOME}"/.bash_extra_pre
+fi
 
 ### OS-specific bits
 
@@ -86,4 +88,6 @@ fi
 
 ### Extra (post)
 
-test -f "${HOME}"/.bash_extra_post && source "${HOME}"/.bash_extra_post
+if test -f "${HOME}"/.bash_extra_post
+    source "${HOME}"/.bash_extra_post
+fi
