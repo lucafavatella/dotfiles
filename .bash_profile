@@ -23,7 +23,6 @@ alias date_l_ymdhm='date "+%Y%m%d%H%M"'
 alias date_u_ymdhm='date -u "+%Y%m%d%H%M"'
 alias date_l_ymdhms='date "+%Y%m%d%H%M%S"'
 alias date_u_ymdhms='date -u "+%Y%m%d%H%M%S"'
-alias ll='ls -la'
 alias grep='grep --colour'
 
 alias e='emacs -nw -Q --eval '"'"'(setq-default make-backup-files nil)'"'"' --eval '"'"'(setq-default auto-save-default nil)'"'"
