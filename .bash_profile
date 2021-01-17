@@ -37,7 +37,7 @@ alias gg='git grep'
 
 ### Extra (pre)
 
-if test -f "${HOME}"/.bash_extra_pre
+if test -f "${HOME}"/.bash_extra_pre; then
     source "${HOME}"/.bash_extra_pre
 fi
 
@@ -88,6 +88,6 @@ fi
 
 ### Extra (post)
 
-if test -f "${HOME}"/.bash_extra_post
+if test -f "${HOME}"/.bash_extra_post; then
     source "${HOME}"/.bash_extra_post
 fi
