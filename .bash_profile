@@ -32,7 +32,6 @@ alias emacs-edts='env HOME=$HOME/.emacs-edts.d emacs -nw'
 
 alias g='git'
 alias gg='git grep'
-alias ggi='git grep -i'
 
 ### Functions
 
