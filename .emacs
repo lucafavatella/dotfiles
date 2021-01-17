@@ -95,7 +95,3 @@ No error is signaled on failed refresh."
   (setq help-at-pt-timer-delay 0.1)
   (help-at-pt-set-timer)
   )
-
-;(add-to-list 'load-path "~/dev/distel/elisp")
-;(require 'distel)
-;(distel-setup)
