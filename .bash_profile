@@ -28,7 +28,6 @@ alias grep='grep --colour'
 alias e='emacs -nw -Q --eval '"'"'(setq-default make-backup-files nil)'"'"' --eval '"'"'(setq-default auto-save-default nil)'"'"
 alias em='emacs -nw'
 alias emacs-prelude='emacs-prelude -nw'
-alias emacs-edts='env HOME=$HOME/.emacs-edts.d emacs -nw'
 
 alias g='git'
 alias gg='git grep'
