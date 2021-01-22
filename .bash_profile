@@ -68,7 +68,7 @@ if [ is_osx ]; then
     fi
     if [ -f "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash" ]; then
         source "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"
-        complete -o default -o nospace -F _git g ## Ref https://github.com/mathiasbynens/dotfiles/blob/c31450229d943144e6e71a1435a02b94c2916af9/.bash_profile#L35-L38
+        __git_complete g __git_main
     fi
 
     ##
