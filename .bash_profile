@@ -63,8 +63,8 @@ if [ is_osx ]; then
 
     ### Extra
 
-    if test -r "${BREW_PREFIX:?}/etc/profile.d/bash_completion.sh"; then
-        source "${BREW_PREFIX:?}/etc/profile.d/bash_completion.sh"
+    if test -r "${BREW_PREFIX:?}/etc/bash_completion"; then
+        source "${BREW_PREFIX:?}/etc/bash_completion"
     fi
     if [ -f "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash" ]; then
         source "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"
