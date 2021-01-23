@@ -48,32 +48,36 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 
 if [ is_osx ]; then
 
-    BREW_CASK_APPDIR="${HOME}/Applications"
-    BREW_PREFIX=$("${HOME}"/bin/brew --prefix)
+    ## Ref https://github.com/Homebrew/brew/blob/2c83ea7339df5ae4d63b0eeb810f638f6d2cc7ca/docs/Manpage.md#environment
+    export HOMEBREW_CACHE="${HOME:?}"/Library/Caches/Homebrew
+    export HOMEBREW_CASK_OPTS="--no-binaries --appdir=${HOME:?}/Applications"
+    export HOMEBREW_NO_ANALYTICS=1
+
+    ## Ref https://github.com/Homebrew/brew/blob/2c83ea7339df5ae4d63b0eeb810f638f6d2cc7ca/docs/Manpage.md#shellenv
+    eval $("${HOME:?}"/homebrew/bin/brew shellenv)
 
     ### Path
 
-    export PATH="${HOME}/bin:${BREW_PREFIX:?}/opt/python/libexec/bin:${BREW_PREFIX:?}/bin:${BREW_CASK_APPDIR}/Docker.app/Contents/Resources/bin:$PATH"
+    export PATH="${HOMEBREW_PREFIX:?}/opt/python/libexec/bin${PATH+:$PATH}"
+    export PATH="$(brew --caskroom docker)"/"$( v="$(brew list --cask --versions docker)"; printf "%s" "${v##docker }"; )"/Docker.app/Contents/Resources/bin"${PATH+:$PATH}"
+    export PATH="${HOMEBREW_PREFIX:?}/bin${PATH+:$PATH}"
+    export PATH="${HOME}/bin${PATH+:$PATH}"
 
     ### Prompt
 
-    if [ -f "${BREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh" ]; then
-        source "${BREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh"
+    if [ -f "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh" ]; then
+        source "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh"
     fi
 
     ### Extra
 
-    if test -r "${BREW_PREFIX:?}/etc/bash_completion"; then
-        source "${BREW_PREFIX:?}/etc/bash_completion"
+    if test -r "${HOMEBREW_PREFIX:?}/etc/bash_completion"; then
+        source "${HOMEBREW_PREFIX:?}/etc/bash_completion"
     fi
-    if [ -f "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash" ]; then
-        source "${BREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"
+    if [ -f "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash" ]; then
+        source "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"
         __git_complete g __git_main
     fi
-
-    ##
-
-    unset BREW_PREFIX
 
 else
 
