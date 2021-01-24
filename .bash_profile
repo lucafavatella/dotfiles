@@ -43,7 +43,7 @@ fi
 ### OS-specific bits
 
 function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f511cf5410d2f80fadd7450d3c131b/bin/dotfiles#L42-L44
-    [[ "$OSTYPE" =~ ^darwin ]] || return 1
+    test -z "${OSTYPE##darwin*}"
 }
 
 if is_osx; then
