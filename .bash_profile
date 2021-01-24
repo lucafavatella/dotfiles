@@ -68,7 +68,6 @@ if is_osx; then
 
     export PATH="${HOMEBREW_PREFIX:?}/opt/python/libexec/bin${PATH+:$PATH}"
     export PATH="${HOMEBREW_CASK_APPDIR:?}"/Docker.app/Contents/Resources/bin"${PATH+:$PATH}"
-    export PATH="${HOMEBREW_PREFIX:?}/bin${PATH+:$PATH}"
     export PATH="${HOME:?}/bin${PATH+:$PATH}"
 
     ### Prompt
