@@ -85,6 +85,8 @@ else
 
 fi
 
+unset -f is_osx
+
 ### Extra (post)
 
 if test -f "${HOME}"/.bash_extra_post; then
