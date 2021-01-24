@@ -1,7 +1,7 @@
 ### Path
 
 ## Ref http://superuser.com/questions/544989/does-tmux-sort-the-path-variable/583502#583502
-if [ -f /etc/profile ]; then
+if test -f /etc/profile; then
     PATH=""
     source /etc/profile
 fi
@@ -67,7 +67,7 @@ if [ is_osx ]; then
 
     ### Prompt
 
-    if [ -f "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh" ]; then
+    if test -f "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh"; then
         source "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-prompt.sh"
     fi
 
@@ -76,7 +76,7 @@ if [ is_osx ]; then
     if test -r "${HOMEBREW_PREFIX:?}/etc/bash_completion"; then
         source "${HOMEBREW_PREFIX:?}/etc/bash_completion"
     fi
-    if [ -f "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash" ]; then
+    if test -f "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"; then
         source "${HOMEBREW_PREFIX:?}/etc/bash_completion.d/git-completion.bash"
         __git_complete g __git_main
     fi
