@@ -46,7 +46,7 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
     [[ "$OSTYPE" =~ ^darwin ]] || return 1
 }
 
-if [ is_osx ]; then
+if is_osx; then
 
     HOMEBREW_CASK_APPDIR="${HOME:?}/Applications"
 
