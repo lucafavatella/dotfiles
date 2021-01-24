@@ -36,8 +36,8 @@ alias gg='git grep'
 
 ### Extra (pre)
 
-if test -f "${HOME}"/.bash_extra_pre; then
-    source "${HOME}"/.bash_extra_pre
+if test -f "${HOME:?}"/.bash_extra_pre; then
+    source "${HOME:?}"/.bash_extra_pre
 fi
 
 ### OS-specific bits
@@ -63,7 +63,7 @@ if [ is_osx ]; then
     export PATH="${HOMEBREW_PREFIX:?}/opt/python/libexec/bin${PATH+:$PATH}"
     export PATH="${HOMEBREW_CASK_APPDIR:?}"/Docker.app/Contents/Resources/bin"${PATH+:$PATH}"
     export PATH="${HOMEBREW_PREFIX:?}/bin${PATH+:$PATH}"
-    export PATH="${HOME}/bin${PATH+:$PATH}"
+    export PATH="${HOME:?}/bin${PATH+:$PATH}"
 
     ### Prompt
 
@@ -89,7 +89,7 @@ else
 
     ### Path
 
-    export PATH="${HOME}/bin${PATH+:$PATH}"
+    export PATH="${HOME:?}/bin${PATH+:$PATH}"
 
 fi
 
@@ -97,6 +97,6 @@ unset -f is_osx
 
 ### Extra (post)
 
-if test -f "${HOME}"/.bash_extra_post; then
-    source "${HOME}"/.bash_extra_post
+if test -f "${HOME:?}"/.bash_extra_post; then
+    source "${HOME:?}"/.bash_extra_post
 fi
