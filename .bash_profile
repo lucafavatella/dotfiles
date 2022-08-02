@@ -50,10 +50,11 @@ if is_osx; then
 
     HOMEBREW_CASK_APPDIR="${HOME:?}/Applications"
 
-    ## Ref https://github.com/Homebrew/brew/blob/2c83ea7339df5ae4d63b0eeb810f638f6d2cc7ca/docs/Manpage.md#environment
+    ## Ref https://github.com/Homebrew/brew/blob/8a153de2bc6a335080d877c0eb14d71e2ff8c537/docs/Manpage.md#environment
     export HOMEBREW_CACHE="${HOME:?}"/Library/Caches/Homebrew
     export HOMEBREW_CASK_OPTS="--no-binaries --appdir=${HOMEBREW_CASK_APPDIR:?}"
     export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_INSTALL_UPGRADE=1
 
     ## Ref https://github.com/Homebrew/brew/blob/2c83ea7339df5ae4d63b0eeb810f638f6d2cc7ca/docs/Manpage.md#shellenv
     eval $("${HOME:?}"/homebrew/bin/brew shellenv)
