@@ -57,7 +57,7 @@ if is_osx; then
     export HOMEBREW_NO_INSTALL_UPGRADE=1
 
     ## Ref https://github.com/Homebrew/brew/blob/2c83ea7339df5ae4d63b0eeb810f638f6d2cc7ca/docs/Manpage.md#shellenv
-    eval $("${BREW_PREFIX-"${HOME:?}""/homebrew}/bin/brew shellenv)
+    eval $("${BREW_PREFIX-"${HOME:?}"/homebrew}"/bin/brew shellenv)
     : ${PATH:?}
     : ${MANPATH:?}
     : ${INFOPATH:?}
