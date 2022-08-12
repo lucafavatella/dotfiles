@@ -1,3 +1,5 @@
 [user]
         name = Luca Favatella
         email = lucafavatella@users.noreply.github.com
+#[credential]
+#        helper = osxkeychain
