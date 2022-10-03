@@ -25,7 +25,7 @@
         textconv = openssl asn1parse -i -in
 [diff "radare2"]
         ## In `.gitattributes` of repo, add e.g. `*.exe  diff=radare2`.
-        textconv = sh -c 'rabin2 -gAEu -K sha256 "${1:?}" && radare2 -q -e scr.color=false -e cfg.fortunes=false -A -c "fs symbols" -c "pdr @@ *" "${1:?}"' radare2
+        textconv = "sh -c 'rabin2 -gAEu -K sha256 \"${1:?}\" && radare2 -q -e scr.color=false -e cfg.fortunes=false -A -c \"fs symbols\" -c \"pdr @@ *\" \"${1:?}\"' radare2"
 [grep]
         lineNumber
 [commit]
