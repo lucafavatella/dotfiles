@@ -26,8 +26,9 @@
 [diff "radare2"]
         ## In `.gitattributes` of repo, add e.g. `*.exe  diff=radare2`.
         textconv = "sh -c 'rabin2 -gAEu -K sha256 \"${1:?}\" && radare2 -q -e scr.color=false -e cfg.fortunes=false -A -c \"fs symbols\" -c \"pdr @@ *\" \"${1:?}\"' radare2"
-[diff "sh3d"]
-        ## In `.gitattributes` of repo, add e.g. `*.sh3d  diff=sh3d`.
+[diff "sh3x"]
+        ## In `.gitattributes` of repo, add e.g. `*.sh3x  diff=sh3x` and `*.sh3d  diff=sh3x`.
+        ## See also `git.hooks.pre-commit.sh3x`.
         textconv = "sh -c '7z l -slt \"${1:?}\" && echo && 7z e -so \"${1:?}\" Home.xml' 7z"
 [grep]
         lineNumber
