@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Ensure no "Home" file committed in "*.sh3x" or "*.sh3d" files.
+# -- 8< ---- From .git/hooks/pre-commit.sample
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=$(git hash-object -t tree /dev/null)
+fi
+
+# Redirect output to stderr.
+exec 1>&2
+# ---- >8 -- From .git/hooks/pre-commit.sample
+
+format_sh3x() {
+    7z d "${1:?}" "Home" > /dev/null
+}
+
+format_if_sh3x_or_sh3d() {
+    case "${1:?}" in
+        (*.sh3x|*.sh3d)
+            format_sh3x "${1:?}"
+            ;;
+        (*)
+            :
+            ;;
+    esac
+}
+
+for N in $(git diff --cached --name-only --diff-filter=d -z $against); do
+    format_if_sh3x_or_sh3d "${N:?}"
+    git add "${N:?}"
+done
