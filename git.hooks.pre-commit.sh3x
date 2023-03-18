@@ -35,7 +35,8 @@ format_if_sh3x_or_sh3d() {
     esac
 }
 
-for N in $(git diff --cached --name-only --diff-filter=d -z $against); do
-    format_if_sh3x_or_sh3d "${N:?}"
-    git add "${N:?}"
-done
+( export IFS='\0' \
+      && for N in $(git diff --cached --name-only --diff-filter=d -z $against); do
+      format_if_sh3x_or_sh3d "${N:?}"
+      git add "${N:?}"
+  done; )
