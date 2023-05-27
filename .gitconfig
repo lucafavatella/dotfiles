@@ -14,6 +14,9 @@
 [diff "textract"]
         ## In `.gitattributes` of repo, add e.g. `*.pdf   diff=textract`.
         textconv = textract
+[diff "tesseract"]
+        ## In `.gitattributes` of repo, add e.g. `*.pdf   diff=tesseract`.
+        textconv = textract -m tesseract
 [diff "tshark"]
         ## In `.gitattributes` of repo, add e.g. `*.pcapng   diff=tshark`.
         textconv = tshark -r
