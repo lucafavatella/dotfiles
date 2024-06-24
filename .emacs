@@ -87,6 +87,11 @@ No error is signaled on failed refresh."
          ;; No need to bind `dumb-jump-back` - just use `M-,` i.e. `xref-pop-marker-stack`.
          ))
 
+(use-package robe
+  :init
+  (add-hook 'ruby-mode-hook 'robe-mode)
+  )
+
 (use-package erlang
   :init
   (add-to-list 'auto-mode-alist '("/\\(?:sys\\|rebar\\)\\.config\\(?:\\..*\\)?\\'" . erlang-mode)) ;; Ref https://github.com/legoscia/dotemacs/blob/55595dc38802fe362aa4c188318519ce44e975a1/dotemacs.org#sysconfig-and-rebarconfig-are-erlang
