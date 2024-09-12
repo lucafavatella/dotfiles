@@ -48,7 +48,7 @@ function is_osx() { ## Ref https://github.com/cowboy/dotfiles/blob/8e4fa2a5d8f51
 
 if is_osx; then
 
-    HOMEBREW_CASK_APPDIR="${HOME:?}/Applications"
+    HOMEBREW_CASK_APPDIR="${BREW_CASK_APPDIR-"${HOME:?}"/Applications}"
 
     ## Ref https://github.com/Homebrew/brew/blob/8a153de2bc6a335080d877c0eb14d71e2ff8c537/docs/Manpage.md#environment
     export HOMEBREW_CACHE="${HOME:?}"/Library/Caches/Homebrew
