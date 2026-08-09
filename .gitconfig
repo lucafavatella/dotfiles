@@ -1,7 +1,7 @@
 [transfer]
         fsckobjects = true
 [core]
-        editor = emacs -nw -Q --eval '(column-number-mode t)'
+        editor = emacs -Q --eval '(column-number-mode t)'
 [pager]
         status
 [color]

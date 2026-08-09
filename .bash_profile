@@ -25,9 +25,9 @@ alias date_l_ymdhms='date "+%Y%m%d%H%M%S"'
 alias date_u_ymdhms='date -u "+%Y%m%d%H%M%S"'
 alias grep='grep --colour'
 
-alias e='emacs -nw -Q --eval '"'"'(setq-default make-backup-files nil)'"'"' --eval '"'"'(setq-default auto-save-default nil)'"'"
-alias em='emacs -nw'
-alias emacs-prelude='emacs-prelude -nw'
+alias e='emacs -Q --eval '"'"'(setq-default make-backup-files nil)'"'"' --eval '"'"'(setq-default auto-save-default nil)'"'"
+alias em='emacs'
+alias emacs-prelude='emacs-prelude'
 
 alias g='git'
 alias gg='git grep'
